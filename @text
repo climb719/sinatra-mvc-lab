@@ -1,0 +1,17 @@
+
+[1mFrom:[0m /home/run719/Development/code/phase_2/sinatra-mvc-lab/models/piglatinizer.rb @ line 8 PigLatinizer#piglatinize:
+
+     [1;34m5[0m: [32mdef[0m [1;34mpiglatinize[0m(words)
+     [1;34m6[0m:     @text = words.split([31m[1;31m"[0m[31m [1;31m"[0m[31m[0m)
+     [1;34m7[0m:     @text.map [32mdo[0m |word|
+ =>  [1;34m8[0m:         binding.pry
+     [1;34m9[0m:     consonant_blend =  word.match([35m[1;35m/[0m[35m[1;35m\b[0m[35m([^aeiou]{1,})[1;35m/[0m[35m[0m) 
+    [1;34m10[0m:     [32mif[0m consonant_blend 
+    [1;34m11[0m:     new_word = word.gsub([35m[1;35m/[0m[35m#{consonant_blend}[0m[35m[1;35m/[0m[35m[0m, [31m[1;31m"[0m[31m[1;31m"[0m[31m[0m)
+    [1;34m12[0m:         pig_latin = [31m[1;31m"[0m[31m#{new_word}[0m[31m#{consonant_blend}[0m[31may[1;31m"[0m[31m[0m
+    [1;34m13[0m:     [32melse[0m 
+    [1;34m14[0m:         pig_latin = [31m[1;31m"[0m[31m#{word}[0m[31mway[1;31m"[0m[31m[0m
+    [1;34m15[0m:         [32mend[0m
+    [1;34m16[0m:     [32mend[0m.join([31m[1;31m"[0m[31m [1;31m"[0m[31m[0m)
+    [1;34m17[0m: [32mend[0m
+
